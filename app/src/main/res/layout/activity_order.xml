@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="2dp"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:layout_marginTop="5dp"
+        bind:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnaddress"
+        bind:layout_constraintTop_toBottomOf="@id/totalPrice"
+        android:text="ADD ADDRESS"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bind:layout_constraintTop_toBottomOf="@id/btnaddress"
+        android:id="@+id/address"
+        android:visibility="invisible"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bind:layout_constraintTop_toBottomOf="@id/address"
+        android:id="@+id/radiogrp">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay on Delievery"
+            android:id="@+id/rbtn1"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:id="@+id/rbtn2"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bind:layout_constraintBottom_toBottomOf="parent"
+        android:text="PROCEED TO BUY"
+        android:id="@+id/placeorder"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
