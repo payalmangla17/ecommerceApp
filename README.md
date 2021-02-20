@@ -5,5 +5,6 @@ It uses the following:
 3. LiveData
 4. ViewModels
 5. Retrofit
+
 App has all the features to add products to cart, place an order,  view cart, login, register etc.
 
